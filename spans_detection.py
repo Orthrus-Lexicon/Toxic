@@ -4,10 +4,10 @@ from nltk.stem.snowball import SnowballStemmer
 import sys
 
 ''' 
-Checks if the piece of text contains toxic words from the list provided in the second argument
+Checks if the piece of text contains toxic words from the list of words provided in the second argument
 Arguments:
-text -  Single string to check for toxic words
-words - list of toxic words
+text - Single string to check for toxic words
+words - List of toxic words
 '''
 def get_detected_toxic_words(text, words):
     detected_words = []
@@ -22,7 +22,7 @@ def get_detected_toxic_words(text, words):
 Extracts annotated toxic words from the dataset
 Arguments:
 spans - List of character offsets 
-texts - List of string comments
+texts - List of comments
 include_empty_spans - Binary flag to include empty spans in the result
 '''
 def get_toxic_words_from_spans(spans, texts, include_empty_spans = False):
@@ -67,7 +67,7 @@ def get_toxic_words_from_spans(spans, texts, include_empty_spans = False):
 Find exact position of word appearances in the comment and return those positions
 Arguments:
 word - word to look for in the comment
-comment - comment in which the word might appear
+comment - comment to check for the word
 '''
 def find_word_in_comment(word, comment):
     needless_punctuation = [',', ' ', '.', '\'', '\"', '?', '!']

@@ -164,12 +164,4 @@ def text_preprocessing(text):
     stop = stopwords.words('english') # Get english stopwords list
     text = " ".join(word for word in text.split() if word not in stop)
     
-    # Stem the words
-#     stemmer = PorterStemmer()
-#     stemmer = SnowballStemmer('english')
-#     stemmer = LancasterStemmer()
-    
-#     text = [stemmer.stem(word) for word in text.split()]
-#     text = " ".join(text)
-    
     return text
